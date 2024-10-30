@@ -22,7 +22,8 @@ class _AdminScreenState extends State<AdminScreen> {
 
   Future<void> _loadCredentials() async {
     // Load the credentials from the text file
-    final String data = await rootBundle.loadString('assets/admin_credentials.txt');
+    final String data =
+        await rootBundle.loadString('assets/admin_credentials.txt');
     // Split the lines and populate the map
     final List<String> lines = data.split('\n');
     for (var line in lines) {
@@ -98,7 +99,8 @@ class _AdminScreenState extends State<AdminScreen> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                const Text('User ID (பயனர் ஐடி)', style: TextStyle(fontSize: 16, color: Colors.black54)),
+                const Text('User ID (பயனர் ஐடி)',
+                    style: TextStyle(fontSize: 16, color: Colors.black54)),
                 const SizedBox(height: 5),
                 TextField(
                   controller: userIdController,
@@ -109,13 +111,17 @@ class _AdminScreenState extends State<AdminScreen> {
                       borderRadius: BorderRadius.circular(30),
                       borderSide: BorderSide.none,
                     ),
-                    contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20), // Padding for the text field
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 15,
+                        horizontal: 20), // Padding for the text field
                     hintText: 'Enter your User ID', // Added hint text
-                    hintStyle: const TextStyle(color: Colors.grey), // Hint text color
+                    hintStyle:
+                        const TextStyle(color: Colors.grey), // Hint text color
                   ),
                 ),
                 const SizedBox(height: 20),
-                const Text('Password (கடவுச்சொல்)', style: TextStyle(fontSize: 16, color: Colors.black54)),
+                const Text('Password (கடவுச்சொல்)',
+                    style: TextStyle(fontSize: 16, color: Colors.black54)),
                 const SizedBox(height: 5),
                 TextField(
                   controller: passwordController,
@@ -127,9 +133,12 @@ class _AdminScreenState extends State<AdminScreen> {
                       borderRadius: BorderRadius.circular(30),
                       borderSide: BorderSide.none,
                     ),
-                    contentPadding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20), // Padding for the text field
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 15,
+                        horizontal: 20), // Padding for the text field
                     hintText: 'Enter your Password', // Added hint text
-                    hintStyle: const TextStyle(color: Colors.grey), // Hint text color
+                    hintStyle:
+                        const TextStyle(color: Colors.grey), // Hint text color
                   ),
                 ),
                 const SizedBox(height: 30),
@@ -141,7 +150,8 @@ class _AdminScreenState extends State<AdminScreen> {
                     elevation: 5, // Added elevation for depth
                   ),
                   onPressed: _login,
-                  child: const Icon(Icons.arrow_forward, color: Colors.white), // Call the login function
+                  child: const Icon(Icons.arrow_forward,
+                      color: Colors.white), // Call the login function
                 ),
                 const SizedBox(height: 20),
               ],
